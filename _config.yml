@@ -1,0 +1,22 @@
+title: Greg
+subtitle: The CGS Calculator
+description: Greg works out your current course marks and how much you'll need to get in the exam
+author: Kit Maywood
+og_image: /assets/og_image.jpg
+google_analytics: UA-80119178-1
+permalink: /:title/
+
+url: https://greg.sci1.uk
+enforce_ssl: greg.sci1.uk
+
+markdown: kramdown
+kramdown:
+  input: GFM
+gems:
+  - jekyll-gist
+  - jekyll-sitemap
+sass:
+  style: compressed
+webrick:
+  headers:
+    X-Clacks-Overhead: GNU Terry Pratchett

@@ -1,0 +1,66 @@
+---
+---
+{% if jekyll.environment == "production" %}
+{% assign site_url = site.url %}
+{% endif %}
+<html>
+<head>
+	<title>Greg - CGS Calculator</title>
+	
+	<link rel="stylesheet" href="{{ site_url }}/assets/styles.css" type="text/css">
+</head>
+<body>
+	<h1>CGS Calculator</h1>
+	<div id="workspace">
+		<div id="mod-0" class="module">
+			<label>
+				Marks:
+				<input class="marks" type="number" min="0" max="22" />
+			</label>
+			<label>
+				Grade:
+				<input class="grade" type="text" />
+			</label>
+			<label>
+				Percentage:
+				<input class="percent" type="number" value="25" />
+			</label>
+		</div>
+		
+		+
+		<div id="mod-1" class="module">
+			<label>
+				Marks:
+				<input class="marks" type="number" min="0" max="22" />
+			</label>
+			<label>
+				Grade:
+				<input class="grade" type="text" />
+			</label>
+			<label>
+				Percentage:
+				<input class="percent" type="number" value="75" />
+			</label>
+		</div>
+		=
+		<div id="total">
+			<span>Total</span>
+			<label>
+				Marks:
+				<input class="marks" type="number" disabled/>
+			</label>
+			<label>
+				Grade:
+				<input class="grade" type="text" disabled/>
+			</label>
+			<label>
+				Percentage:
+				<input class="percent" type="number" value="100" disabled/>
+			</label>
+		</div>
+	</div>
+	<div>
+		<script src='{{ site_url }}/assets/scripts.js' type="text/javascript" async></script>
+	</div>
+</body>
+</html>
