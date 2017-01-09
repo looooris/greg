@@ -85,6 +85,9 @@ var Modules = {
 		Modules.addModule();
 		Modules.addModule();
 		Modules.updateTotal();
+		
+		var button     = document.getElementById('add');
+		button.onclick = Modules.addModule;
 	},
 	
 	addModule : function(modElement) {
