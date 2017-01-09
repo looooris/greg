@@ -3,9 +3,34 @@
 {% if jekyll.environment == "production" %}
 {% assign site_url = site.url %}
 {% endif %}
+{% assign page_url = site_url | append: page.url %}
+{% assign og_image = site_url | append: site.og_image %}
 <html>
 <head>
-	<title>Greg - CGS Calculator</title>
+	<!-- General Meta Tags -->
+	<title>{{ site.title }} - {{ site.subtitle }}</title>
+	<meta name="author" content="{{ site.author }}">
+	<meta name="description" content="{{ site.description }}">
+
+	<meta name="DC.date" scheme="W3CDTF" content="2017-01-09">
+
+	<!-- OpenGraph Tags -->
+	<meta property="og:title" content="{{ site.title }}">
+	<meta property="og:url" content="{{ page_url }}">
+	<meta property="og:locale" content="en_GB">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:image" content="{{ og_image }}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="1200">
+
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@{{ site.twitter }}">
+	<meta name="twitter:title" content="{{ site.title }}">
+	<meta name="twitter:url" content="{{ page_url }}">
+	<meta name="twitter:description" content="{{ site.description }}">
+	<meta name="twitter:creator" content="@{{ site.twitter }}">
+	<meta name="twitter:image:src" content="{{ og_image }}">
 	
 	<link rel="stylesheet" href="{{ site_url }}/assets/styles.css" type="text/css">
 </head>
