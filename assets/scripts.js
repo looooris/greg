@@ -84,7 +84,6 @@ var Modules = {
 		
 		Modules.addModule();
 		Modules.addModule();
-		Modules.updateTotal();
 		
 		var button     = document.getElementById('add');
 		button.onclick = Modules.addModule;
@@ -111,6 +110,8 @@ var Modules = {
 		
 		modElement.onkeyup = Modules.onInputChange;
 		modElement.onclick = Modules.onInputChange;
+		
+		Modules.updateTotal();
 	},
 	
 	updateTotal : function() {
