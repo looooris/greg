@@ -1,0 +1,40 @@
+---
+---
+
+$spacing: 0.4em;
+
+html, body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	background-color: #F1F1F1;
+}
+
+h1, p {
+	text-align: center;
+}
+
+h4 {
+	margin: .4em auto;
+}
+
+label  {
+	display: block;
+	padding: $spacing;
+	clear: both;
+}
+
+#workspace {
+	margin: 1.5em;
+	overflow: auto;
+	
+	& > div {
+		background-color: #FCFCFC;
+		border-radius: 0.3em;
+		float: left;
+		margin: $spacing;
+		padding: $spacing;
+	}
+	
+	input {
+		float: right;
+	}
+}
