@@ -36,5 +36,20 @@ label  {
 	
 	input {
 		float: right;
+		width: 10em;
+		margin-left: $spacing;
+	}
+}
+
+#fork-me {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+@media only screen and (max-width : 767px) {
+	#fork-me {
+		display: none;
 	}
 }
