@@ -73,23 +73,28 @@ var Modules = {
 	modCount  : 0,
 	
 	init : function() {
-		var modules = document.getElementsByClassName('module'),
-		total       = document.getElementById('total');
-		
-		for (i=0; i < modules.length; i++) {
-			Modules.addModule(modules[i]);
-		}
+		Modules.workspaceElement = document.getElementById('workspace');
+		Modules.totalElement     = document.getElementById('total');
 		
 		Modules.total = {
-			'mElement' : total.getElementsByClassName('marks')[0],
-			'gElement' : total.getElementsByClassName('grade')[0],
-			'pElement' : total.getElementsByClassName('percent')[0],
+			'mElement' : Modules.totalElement.getElementsByClassName('marks')[0],
+			'gElement' : Modules.totalElement.getElementsByClassName('grade')[0],
+			'pElement' : Modules.totalElement.getElementsByClassName('percent')[0],
 		};
 		
+		Modules.addModule();
+		Modules.addModule();
 		Modules.updateTotal();
 	},
 	
 	addModule : function(modElement) {
+		var modElement = document.createElement('div');
+		modElement.id  = 'mod-' + Modules.modCount;
+		Modules.modCount++;
+		modElement.innerHTML = '<h4>Module</h4><label>Marks: <input class=marks type=number max=22 min=0></label><label>Grade: <input class=grade></label><label>Percentage: <input class=percent type=number value=50></label>';
+		
+		Modules.workspaceElement.insertBefore(modElement, Modules.totalElement);
+		
 		var module = {
 			'mElement' : modElement.getElementsByClassName('marks')[0],
 			'gElement' : modElement.getElementsByClassName('grade')[0],
@@ -103,8 +108,6 @@ var Modules = {
 		
 		modElement.onkeyup = Modules.onInputChange;
 		modElement.onclick = Modules.onInputChange;
-		
-		Modules.modCount++;
 	},
 	
 	updateTotal : function() {
