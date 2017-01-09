@@ -102,6 +102,7 @@ var Modules = {
 		Modules.workspace[modElement.id] = module;
 		
 		modElement.onkeyup = Modules.onInputChange;
+		modElement.onclick = Modules.onInputChange;
 		
 		Modules.modCount++;
 	},
