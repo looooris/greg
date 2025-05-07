@@ -8,40 +8,22 @@
 <html>
 <head>
 	<!-- General Meta Tags -->
-	<title>{{ site.title }} - {{ site.subtitle }}</title>
-	<meta name="author" content="{{ site.author }}">
-	<meta name="description" content="{{ site.description }}">
+	<title>greg</title>
+	<meta name="author" content="kittsville and looooris">
+	<meta name="description" content="grec for ncs">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-	<meta name="DC.date" scheme="W3CDTF" content="2017-01-09">
-
-	<!-- OpenGraph Tags -->
-	<meta property="og:title" content="{{ site.title }}">
-	<meta property="og:url" content="{{ page_url }}">
-	<meta property="og:locale" content="en_GB">
-	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:image" content="{{ og_image }}">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="1200">
-
-	<!-- Twitter tags -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@{{ site.twitter }}">
-	<meta name="twitter:title" content="{{ site.title }}">
-	<meta name="twitter:url" content="{{ page_url }}">
-	<meta name="twitter:description" content="{{ site.description }}">
-	<meta name="twitter:creator" content="@{{ site.twitter }}">
-	<meta name="twitter:image:src" content="{{ og_image }}">
-	
 	<link rel="stylesheet" href="{{ site_url }}/assets/styles.css" type="text/css">
+	<link rel="icon" type="image/png"  href="{{ site_url }}/assets/og_image.jpg" />
 </head>
 <body>
-	<h1>CGS Calculator</h1>
-	<p>Estimates your course grade based on your marks for each part of the course</p>
-	<p>Some courses require you to pass <em>all</em> parts of the course</p>
-	<p>I take no responsibility for your final grade</p>
-	<a href="https://github.com/kittsville/Greg">
-		<img id="fork-me" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-	</a>
+	<h1><span>CGS Calculator: </span><span style="font-family: Kode Mono">NCS Edition*</span></h1>
+	<p>Estimates your course grade based on your marks for each part of the course.</p>
+	<p>Some courses require you to pass <em>all</em> parts of the course. Check with your course co-ordinator or the course catalogue.</p>
+	<p>I take no responsibility for your final grade. Good luck!</p>
+
 	<div class="button">
 		<button id="add">Add module</button>
 	</div>
@@ -57,13 +39,23 @@
 				<input class="grade" type="text" disabled/>
 			</label>
 			<label>
-				Percentage:
-				<input class="percent" type="number" value="100" disabled/>
+				Weight:
+				<input class="weight" type="number" value="100" disabled/>
 			</label>
 		</div>
+	</div>
+	<div>
+		<p id="disclaimer"></p>
+		<p><b id="error"></b></p>
+		<hr />
+		<p>*uses the ncs percentage to cgs scale. <a href="https://www.abdn.ac.uk/media/site/staffnet/documents/academic-quality-handbook/01_UG_CoP_2021_and_Beyond.pdf">more degree classification info</a></p>
+		<p>original by <a href="https://github.com/kittsville">kittsville</a> features added by <a href="https://github.com/looooris">looooris</a></p>
+		<p><a href="https://github.com/kittsville">fork the original repo</a></p>
+		<p><small>2017 - 2025</small></p>
 	</div>
 	<div>
 		<script src='{{ site_url }}/assets/scripts.js' type="text/javascript" async></script>
 	</div>
 </body>
 </html>
+/
