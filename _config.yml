@@ -1,13 +1,11 @@
 title: Greg
-subtitle: The CGS Calculator
+subtitle: The CGS Calculator. Now for NCS!
 description: Greg works out your current course marks and how much you'll need to get in the exam
-author: Kit Maywood
-twitter: kittsville
+author: Kit Maywood & looooris
 og_image: /assets/og_image.jpg
-permalink: /:title/
 
-url: https://greg.sci1.uk
-enforce_ssl: greg.sci1.uk
+url: https://greg.loris.uk
+enforce_ssl: greg.loris.uk
 
 markdown: kramdown
 kramdown:
